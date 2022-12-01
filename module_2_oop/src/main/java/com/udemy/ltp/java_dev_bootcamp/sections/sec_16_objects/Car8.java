@@ -2,16 +2,16 @@ package com.udemy.ltp.java_dev_bootcamp.sections.sec_16_objects;
 
 import java.util.Arrays;
 
-public class Car7 {
+public class Car8 {
 	private String make;
 	private String color;
 	private double price;
 	private int year;
 	private String[] parts;
 
-	public Car7() {}
+	public Car8() {}
 
-	public Car7(Car7 source) {
+	public Car8(Car8 source) {
 		this.make = source.make;
 		this.color = source.color;
 		this.price = source.price;
@@ -19,7 +19,7 @@ public class Car7 {
 		this.parts = source.parts;
 	}
 
-	public Car7(
+	public Car8(
 		String make,
 		String color,
 		double price,
@@ -30,9 +30,6 @@ public class Car7 {
 		this.color = color;
 		this.price = price;
 		this.year = year;
-
-		// why use "Arrays.copyOf()"? -> watch vids: 152 & 153
-		// this.parts = parts;
 		this.parts = Arrays.copyOf(parts, parts.length);
 	}
 
