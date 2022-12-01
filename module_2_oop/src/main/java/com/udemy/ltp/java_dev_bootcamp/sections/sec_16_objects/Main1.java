@@ -2,7 +2,6 @@ package com.udemy.ltp.java_dev_bootcamp.sections.sec_16_objects;
 
 public class Main1 {
 	public static void main(String[] args) {
-		// WITHOUT CALLING THE CONSTRUCTOR
 		Car1 car_1 = new Car1();
 
 		car_1.make = "Volkswagen";
@@ -29,16 +28,6 @@ public class Main1 {
 			" | Color: " + car_2.color +
 			" | Year: " + car_2.year +
 			" | Price: $" + car_2.price
-		);
-
-		// WITH CALLING THE CONSTRUCTOR
-		Car1 car_3 = new Car1("Ford Mustang", "red", 365, 1969);
-
-		System.out.println(
-			"Make: " + car_3.make +
-			" | Color: " + car_3.color +
-			" | Year: " + car_3.year +
-			" | Price: $" + car_3.price
 		);
 	}
 }
