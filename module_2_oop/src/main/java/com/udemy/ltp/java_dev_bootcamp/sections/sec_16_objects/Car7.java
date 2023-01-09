@@ -31,7 +31,8 @@ public class Car7 {
 		this.price = price;
 		this.year = year;
 
-		// why use "Arrays.copyOf()"? -> watch vids: 152 & 153
+		// why "Arrays.copyOf(parts, parts.length)", but not just "parts"?
+		// -> watch vids: 148 (Arrays are Mutable Objects) & 149 (Fixing the Constructor)
 		// this.parts = parts;
 		this.parts = Arrays.copyOf(parts, parts.length);
 	}

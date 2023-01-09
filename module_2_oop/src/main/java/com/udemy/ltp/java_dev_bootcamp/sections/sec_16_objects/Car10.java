@@ -2,28 +2,24 @@ package com.udemy.ltp.java_dev_bootcamp.sections.sec_16_objects;
 
 import java.util.Arrays;
 
-public class Car8 {
+public class Car10 {
 	private String make;
 	private String color;
 	private double price;
 	private int year;
 	private String[] parts;
 
-	public Car8() {}
+	public Car10() {}
 
-	public Car8(Car8 source) {
+	public Car10(Car10 source) {
 		this.make = source.make;
 		this.color = source.color;
 		this.price = source.price;
 		this.year = source.year;
-
-		// both car_12_1 & car_12_2 point to the same reference of "new String[] {"tires", "keys"}"
-		// explained in vid 150 (Fixing the Copy Constructor)
-		// this.parts = source.parts;
 		this.parts = Arrays.copyOf(source.parts, source.parts.length);
 	}
 
-	public Car8(
+	public Car10(
 		String make,
 		String color,
 		double price,
@@ -70,18 +66,18 @@ public class Car8 {
 	}
 
 	public String[] getParts() {
-		return parts;
+		return Arrays.copyOf(this.parts, this.parts.length);
 	}
 
 	public void setParts(String[] parts) {
-		this.parts = parts;
+		this.parts = Arrays.copyOf(parts, parts.length);
 	}
 
-	public void drive() {
-		System.out.println(
-			"this " + this.year + " " +
-			this.color + " " +
-			this.make + " is a beast on the road"
-		);
+	public String toString() {
+		return "make: " + make +
+					 " | color: " + color +
+					 " | price: " + price +
+					 " | year: " + year +
+					 " | parts: " + Arrays.toString(parts);
 	}
 }
